@@ -7,13 +7,13 @@
   <meta name="description" content="A little birthday magic. Open the curtains for a birthday surprise made with love.">
   <title>A Little Birthday Magic · For Helly Sh</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23590d24'/%3E%3Ctext x='20' y='29' text-anchor='middle' font-size='28' fill='%23efce8c'%3E♥%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="./style.css">
-  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="./style.css?v=final">
+  <script src="./app.js?v=final" defer></script>
 </head>
 <body>
   <header class="header">
-    <a class="brand" href="./" aria-label="A Little Birthday Magic home"><span class="brand-icon">✧</span><span>a little<br><strong>birthday magic</strong></span></a>
-    <div class="header-actions"><span class="header-note">A small gesture. A whole lot of love.</span><button class="button plain" id="personalise">Personalise <span aria-hidden="true">↗</span></button></div>
+    <div class="brand"><span class="brand-icon">✧</span><span>a little<br><strong>birthday magic</strong></span></div>
+    <div class="header-actions"><span class="header-note">A small gesture. A whole lot of love.</span></div>
   </header>
   <main>
     <section class="theatre" aria-label="Birthday surprise">
@@ -52,28 +52,9 @@
       <div class="stage-bottom"><span>EST. THE DAY YOU WERE BORN</span><button id="replay" class="replay" hidden>↺ Replay the surprise</button><span aria-hidden="true">✦</span></div>
       <canvas id="confetti" aria-hidden="true"></canvas>
     </section>
-    <div class="below-stage"><p><span aria-hidden="true">♡</span> Some people make the world a little more wonderful. <em>You’re one of them.</em></p><button class="button share-button" id="share">Share this surprise <span aria-hidden="true">↗</span></button></div>
+    <div class="below-stage"><p><span aria-hidden="true">♡</span> Some people make the world a little more wonderful. <em>You’re one of them.</em></p></div>
   </main>
   <footer>MADE WITH LOVE <span>✧</span> FOR A DAY WORTH CELEBRATING</footer>
-  <dialog id="editor" aria-labelledby="editor-title">
-    <form id="greeting-form">
-      <div class="dialog-head"><span class="eyebrow">A FEW WORDS, A LITTLE MAGIC</span><button type="button" class="close" data-close aria-label="Close personalisation">×</button></div>
-      <h2 id="editor-title">Make it personal.</h2><p class="dialog-description">The best surprises have a little bit of you in them.</p>
-      <label for="name">Birthday person’s name</label><input id="name" name="name" maxlength="45" required autocomplete="off">
-      <label for="message">Your birthday wish</label><textarea id="message" name="message" maxlength="700" rows="4" required></textarea>
-      <label for="from">Your sign-off</label><input id="from" name="from" maxlength="100" placeholder="With all my love ♡" autocomplete="off">
-      <p class="form-note">Your words are saved in the link. Anyone you share it with can read them.</p>
-      <button class="button primary" type="submit">Preview my surprise <span aria-hidden="true">↗</span></button>
-    </form>
-  </dialog>
-  <dialog id="share-dialog" aria-labelledby="share-title">
-    <div class="dialog-head"><span class="eyebrow">GOOD THINGS ARE MEANT TO BE SHARED</span><button class="close" data-close aria-label="Close sharing">×</button></div>
-    <span class="share-heart" aria-hidden="true">♡</span><h2 id="share-title">Send a little happiness.</h2><p class="dialog-description">Their link starts with closed curtains. The surprise is theirs to open.</p>
-    <label for="share-link">Your personal birthday link</label><input id="share-link" readonly>
-    <button class="button primary" id="copy">Copy surprise link <span aria-hidden="true">↗</span></button>
-    <button class="button native-share" id="native-share" hidden>Share with an app</button>
-    <p class="form-note" id="share-status" aria-live="polite"></p>
-  </dialog>
   <div id="toast" role="status"></div>
 </body>
 </html>
