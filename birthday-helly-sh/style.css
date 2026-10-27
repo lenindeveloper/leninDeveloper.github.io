@@ -5,4 +5,22 @@
 .curtain-right{scale:1;background-position:right center}.theatre.opened .curtain-right{transform:translateX(96%) skewY(3deg)}
 @media(min-height:900px){.reveal h1{font-size:70px}.cake{width:245px;height:153px}.message{font-size:14px}.invitation h2{font-size:74px}}
 @media(max-width:700px){.header{height:88px;padding:0 6%}.header-note{display:none}.brand{font-size:12px;gap:8px}.brand strong{font-size:16px}.brand-icon{font-size:34px}.plain{font-size:11px;gap:10px}main{padding:0 14px}.theatre{height:calc(100svh - 210px);min-height:620px;border-radius:12px}.stage-top,.stage-bottom{left:20px;right:20px}.stage-top{top:55px}.stage-label{font-size:6px;letter-spacing:1.4px}.sound{font-size:9px;padding:7px 10px}.stage-bottom{font-size:6px;letter-spacing:1px;bottom:17px}.invitation h2{font-size:47px;letter-spacing:-1px}.invitation .eyebrow{font-size:7px;letter-spacing:1.8px}.invitation-emblem{width:55px;height:55px;font-size:32px;margin-bottom:30px}.for-name{font-size:17px}.reveal{padding:105px 27px 70px}.reveal>.eyebrow{font-size:6px;letter-spacing:1.8px}.reveal h1{font-size:42px}.reveal h1 i{font-size:25px;right:-25px;bottom:5px}.cake{width:185px;height:116px;margin:12px 0}.message{font-size:12px;line-height:1.8}.signature{font-size:17px;margin-bottom:20px}.below-stage{padding:22px 6px 0;flex-direction:column;gap:12px;text-align:center}.below-stage p{font-size:10px;margin:0;max-width:290px}.below-stage em{display:block}.below-stage p>span{display:none}.share-button{font-size:10px;padding:9px 15px}footer{font-size:6px;letter-spacing:1.4px;padding:25px 10px}.replay{font-size:9px}.curtain{background-size:170% 100%}dialog{padding:24px}}
+.has-photo .reveal{position:absolute;inset:0;display:grid;grid-template-columns:minmax(200px,300px) minmax(0,510px);justify-content:center;gap:62px;padding:115px 65px 80px;max-width:1150px;margin:auto;min-height:740px;height:auto}
+.has-photo.opened{min-height:740px;height:auto;max-height:none}
+.has-photo.opened .reveal{position:relative}
+.birthday-copy{display:flex;flex-direction:column;align-items:center;min-width:0}
+.birthday-copy>.eyebrow{color:#d3ae84;font-size:8px;letter-spacing:2.4px;margin-bottom:19px}
+.birthday-portrait{margin:0;align-self:center;transform:rotate(-3deg)}
+.portrait-frame{aspect-ratio:4/5;overflow:hidden;border:6px solid #f9e8d2;border-radius:4px;background:#371524;box-shadow:0 0 0 1px #d2ac76,0 18px 50px #09000d77}
+.portrait-frame img{width:100%;height:100%;display:block;object-fit:cover;object-position:50% 70%;transform:scale(1.45);transform-origin:50% 71%}
+.birthday-portrait figcaption{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:18px;margin-top:18px;text-align:center}
+.birthday-portrait figcaption span{display:inline-block;margin-left:5px}
+.birthday-copy h1{font-size:clamp(36px,4vw,56px)}
+.birthday-copy h1 i{font-size:28px;right:-30px}
+.birthday-copy .cake{width:175px;height:109px;flex-shrink:0}
+.birthday-copy .message{font-size:13px}
+.birthday-copy .signature{font-size:18px}
+.below-stage{justify-content:center}
+@media(max-width:900px) and (min-width:701px){.has-photo .reveal{gap:32px;padding-left:40px;padding-right:40px;grid-template-columns:minmax(170px,230px) minmax(0,440px)}.birthday-copy h1{font-size:40px}.birthday-copy>.eyebrow{font-size:6px;letter-spacing:1.5px}.birthday-copy .message{font-size:12px}}
+@media(max-width:700px){.has-photo.opened{min-height:960px}.has-photo .reveal{display:flex;flex-direction:column;gap:25px;justify-content:center;min-height:960px;padding:110px 27px 75px}.birthday-portrait{width:180px;flex-shrink:0}.portrait-frame{border-width:5px}.birthday-portrait figcaption{font-size:15px;margin-top:13px}.birthday-copy>.eyebrow{font-size:6px;letter-spacing:1.7px;margin-bottom:14px}.birthday-copy h1{font-size:38px}.birthday-copy h1 i{font-size:23px;right:-25px}.birthday-copy .cake{width:125px;height:78px;margin:9px 0}.birthday-copy .message{font-size:12px;line-height:1.8}.birthday-copy .signature{font-size:16px;margin-bottom:18px}.has-photo .invitation{padding:85px 20px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition-duration:.01ms!important;transition-delay:0ms!important;scroll-behavior:auto!important}}

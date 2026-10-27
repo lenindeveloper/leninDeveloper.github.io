@@ -7,7 +7,7 @@
   <meta name="description" content="A little birthday magic. Open the curtains for a birthday surprise made with love.">
   <title>A Little Birthday Magic · For Helly Sh</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23590d24'/%3E%3Ctext x='20' y='29' text-anchor='middle' font-size='28' fill='%23efce8c'%3E♥%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="./style.css?v=final">
+  <link rel="stylesheet" href="./style.css?v=photo">
   <script src="./app.js?v=final" defer></script>
 </head>
 <body>
@@ -16,9 +16,14 @@
     <div class="header-actions"><span class="header-note">A small gesture. A whole lot of love.</span></div>
   </header>
   <main>
-    <section class="theatre" aria-label="Birthday surprise">
+    <section class="theatre has-photo" aria-label="Birthday surprise">
       <div class="stage-glow" aria-hidden="true"></div><div id="stars" aria-hidden="true"></div>
       <div class="reveal" id="reveal" aria-hidden="true" inert>
+        <figure class="birthday-portrait">
+          <div class="portrait-frame"><img src="./helly-photo.png" alt="Helly smiling in a blue dress" width="902" height="1600" decoding="async"></div>
+          <figcaption>My favourite person <span aria-hidden="true">♡</span></figcaption>
+        </figure>
+        <div class="birthday-copy">
         <div class="eyebrow">THE WORLD GOT A LITTLE LUCKIER TODAY</div>
         <h1>Happy Birthday,<br><span id="birthday-name">Helly Sh</span><i aria-hidden="true">♡</i></h1>
         <div class="cake" aria-hidden="true">
@@ -37,6 +42,7 @@
         <p class="message" id="birthday-message"></p>
         <p class="signature" id="birthday-from">With all my love, Lenin Irungbam ♡</p>
         <button class="button celebrate" id="celebrate" tabindex="-1">A little more magic <span aria-hidden="true">✧</span></button>
+        </div>
       </div>
       <div class="curtain curtain-left" aria-hidden="true"></div><div class="curtain curtain-right" aria-hidden="true"></div>
       <div class="valance" aria-hidden="true"></div>
