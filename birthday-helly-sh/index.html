@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#590d24">
+  <meta name="description" content="A little birthday magic. Open the curtains for a birthday surprise made with love.">
+  <title>A Little Birthday Magic · For Helly Sh</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23590d24'/%3E%3Ctext x='20' y='29' text-anchor='middle' font-size='28' fill='%23efce8c'%3E♥%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="./" aria-label="A Little Birthday Magic home"><span class="brand-icon">✧</span><span>a little<br><strong>birthday magic</strong></span></a>
+    <div class="header-actions"><span class="header-note">A small gesture. A whole lot of love.</span><button class="button plain" id="personalise">Personalise <span aria-hidden="true">↗</span></button></div>
+  </header>
+  <main>
+    <section class="theatre" aria-label="Birthday surprise">
+      <div class="stage-glow" aria-hidden="true"></div><div id="stars" aria-hidden="true"></div>
+      <div class="reveal" id="reveal" aria-hidden="true" inert>
+        <div class="eyebrow">THE WORLD GOT A LITTLE LUCKIER TODAY</div>
+        <h1>Happy Birthday,<br><span id="birthday-name">Helly Sh</span><i aria-hidden="true">♡</i></h1>
+        <div class="cake" aria-hidden="true">
+          <svg viewBox="0 0 280 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="140" cy="160" rx="106" ry="10" fill="#e4ba79" opacity=".14"/>
+            <path d="M61 110v37c0 19 158 19 158 0v-37" fill="#d68a99"/><ellipse cx="140" cy="147" rx="79" ry="13" fill="#bd6d83"/>
+            <path d="M61 108c0-20 158-20 158 0v15c-12 0-13-12-23-9-8 3-4 20-14 20-12 0-8-19-18-19-9 0-10 13-20 12-10-1-7-15-17-15-11 0-8 24-19 22-11-2-5-20-17-20-11 0-13 10-30 8z" fill="#f7dbbf"/>
+            <ellipse cx="140" cy="105" rx="79" ry="16" fill="#fce9d0"/>
+            <path d="M91 79v24c0 13 98 13 98 0V79" fill="#dfa6ac"/><ellipse cx="140" cy="78" rx="49" ry="11" fill="#fff0d7"/>
+            <path d="M91 79v11c11 0 11-6 18-4 6 2 3 13 10 13 7 0 5-13 12-13 8 0 6 9 14 9 8 0 5-8 13-9 8 0 9 7 15 6 6-1 9-5 16-2V79" fill="#fff0d7"/>
+            <path d="M116 75V49m24 28V40m24 35V49" stroke="#f6d98f" stroke-width="5" stroke-linecap="round"/>
+            <path d="M116 45c-9-7-1-15 0-18 3 6 8 12 0 18M140 36c-9-7-1-15 0-18 3 6 8 12 0 18M164 45c-9-7-1-15 0-18 3 6 8 12 0 18" fill="#ffc968" class="flames"/>
+            <path d="m78 136 3 1m29 10 2-2m52 2 3 1m34-11 2-2" stroke="#ffe4bc" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="message" id="birthday-message"></p>
+        <p class="signature" id="birthday-from">With all my love, Lenin Irungbam ♡</p>
+        <button class="button celebrate" id="celebrate" tabindex="-1">A little more magic <span aria-hidden="true">✧</span></button>
+      </div>
+      <div class="curtain curtain-left" aria-hidden="true"></div><div class="curtain curtain-right" aria-hidden="true"></div>
+      <div class="valance" aria-hidden="true"></div>
+      <div class="invitation" id="invitation">
+        <span class="invitation-emblem" aria-hidden="true">♡</span>
+        <p class="eyebrow">SOMEONE VERY SPECIAL DESERVES</p>
+        <h2>A little surprise,<br>just for you.</h2>
+        <p class="for-name">For <span id="invite-name">Helly Sh</span>, with love</p>
+        <button class="open-button" id="open">Open your surprise <span aria-hidden="true">↗</span></button>
+        <span class="invitation-hint">go on, this moment is yours</span>
+      </div>
+      <div class="stage-top"><span class="stage-label"><span></span> A MOMENT MADE FOR YOU</span><button class="sound" id="sound" aria-label="Turn birthday music on" aria-pressed="false"><span aria-hidden="true">♫</span> <span id="sound-label">Sound off</span></button></div>
+      <div class="stage-bottom"><span>EST. THE DAY YOU WERE BORN</span><button id="replay" class="replay" hidden>↺ Replay the surprise</button><span aria-hidden="true">✦</span></div>
+      <canvas id="confetti" aria-hidden="true"></canvas>
+    </section>
+    <div class="below-stage"><p><span aria-hidden="true">♡</span> Some people make the world a little more wonderful. <em>You’re one of them.</em></p><button class="button share-button" id="share">Share this surprise <span aria-hidden="true">↗</span></button></div>
+  </main>
+  <footer>MADE WITH LOVE <span>✧</span> FOR A DAY WORTH CELEBRATING</footer>
+  <dialog id="editor" aria-labelledby="editor-title">
+    <form id="greeting-form">
+      <div class="dialog-head"><span class="eyebrow">A FEW WORDS, A LITTLE MAGIC</span><button type="button" class="close" data-close aria-label="Close personalisation">×</button></div>
+      <h2 id="editor-title">Make it personal.</h2><p class="dialog-description">The best surprises have a little bit of you in them.</p>
+      <label for="name">Birthday person’s name</label><input id="name" name="name" maxlength="45" required autocomplete="off">
+      <label for="message">Your birthday wish</label><textarea id="message" name="message" maxlength="700" rows="4" required></textarea>
+      <label for="from">Your sign-off</label><input id="from" name="from" maxlength="100" placeholder="With all my love ♡" autocomplete="off">
+      <p class="form-note">Your words are saved in the link. Anyone you share it with can read them.</p>
+      <button class="button primary" type="submit">Preview my surprise <span aria-hidden="true">↗</span></button>
+    </form>
+  </dialog>
+  <dialog id="share-dialog" aria-labelledby="share-title">
+    <div class="dialog-head"><span class="eyebrow">GOOD THINGS ARE MEANT TO BE SHARED</span><button class="close" data-close aria-label="Close sharing">×</button></div>
+    <span class="share-heart" aria-hidden="true">♡</span><h2 id="share-title">Send a little happiness.</h2><p class="dialog-description">Their link starts with closed curtains. The surprise is theirs to open.</p>
+    <label for="share-link">Your personal birthday link</label><input id="share-link" readonly>
+    <button class="button primary" id="copy">Copy surprise link <span aria-hidden="true">↗</span></button>
+    <button class="button native-share" id="native-share" hidden>Share with an app</button>
+    <p class="form-note" id="share-status" aria-live="polite"></p>
+  </dialog>
+  <div id="toast" role="status"></div>
+</body>
+</html>
